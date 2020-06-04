@@ -7,7 +7,11 @@
   "ModuleID": "Dictation",
   "Name": "Dictation",
   "Origin": "Mods",
+<<<<<<< HEAD
   "Published": "2020-05-31",
+=======
+  "Published": "2020-05-30",
+>>>>>>> upstream/master
   "SortKey": "DICTATION",
   "SourceUrl": "https://github.com/Fartlicker777/Trivia-Murder-Party.git",
   "Souvenir": {
