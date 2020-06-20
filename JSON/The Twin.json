@@ -6,6 +6,7 @@
   "ExpertDifficulty": "VeryHard",
   "Ignore": [
     "14",
+    "A>N<D",
     "Bamboozling Time Keeper",
     "Brainf---",
     "Forget Enigma",
@@ -46,6 +47,7 @@
   "Published": "2020-04-09",
   "SortKey": "TWIN",
   "SourceUrl": "https://github.com/kavinkul/Ktane-The-Twin",
+  "Souvenir": { "Status": "NotACandidate" },
   "SteamID": "2053979482",
   "Symbol": "Tt",
   "Type": "Regular"

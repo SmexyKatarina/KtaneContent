@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
     <title>Forget Enigma — Keep Talking and Nobody Explodes Module</title>
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -28,25 +27,25 @@
         #interactive {
             font-size: 12.5px;
         }
-        
+
         #interactive td.borderless:first-child {
             padding: .3em;
         }
 
-		button {
-			font-family: Special Elite;
-			background-color: white;
-			color: black;
-			padding: 1px 3px;
-			border-radius: 5px;
-			border: black 2px solid;
-			transition: 0.3s;
-		}
+        button {
+            font-family: Special Elite;
+            background-color: white;
+            color: black;
+            padding: 1px 3px;
+            border-radius: 5px;
+            border: black 2px solid;
+            transition: 0.3s;
+        }
 
-		button:hover {
-			background-color: black;
-			color: white;
-		}
+        button:hover {
+            background-color: black;
+            color: white;
+        }
     </style>
     <script src="js/jquery.3.1.1.min.js"></script>
 </head>
@@ -69,7 +68,7 @@
                 <p>They are read in this order: Reflector-Bottom Rotor-Top Rotor. Above the top rotor, you will type A-Z to use as the keyboard.</p>
                 <p>Use the schematic at the bottom to help you create the Enigma Decryptor.</p>
                 <p>The rotors below the screen shows what letter each one is at. Shift the letters until the bottom left letter is equal to the letter on the rotor.</p>
-                
+
                 <table id="interactive" class="borderless"></table>
             </div>
             <div class="page-footer relative-footer">Page 1 of 3</div>
@@ -114,7 +113,6 @@
                 <br>
                 <br>
                 <p style='text-align: center'><img src="img/Forget Enigma/DecryptSteps.png" style="width: 16cm" /></p>
-
 
                 <br>
                 <br>
@@ -186,7 +184,7 @@
                 ["E", "S", "K", "O", "A", "Q", "M", "J", "Y", "H", "C", "P", "G", "T", "D", "L", "F", "U", "B", "N", "R", "X", "Z", "V", "I", "W"],
             ],
         };
-        
+
         function mod26(n) {
             return ((n % 26) + 26) % 26;
         }
@@ -195,7 +193,7 @@
 
         // Make the keyboard
         const keyboard = $("<tr>").appendTo(interactive);
-            
+
         $("<td>").addClass("borderless").appendTo(keyboard);
         // The top row of any reflector is just A-Z.
         for (let i = 0; i < 26; i++) {
@@ -213,7 +211,7 @@
                     bottomRow.children().eq(i).text(cyclers[name][1][mod26(i + position)]);
                 }
             };
-            
+
             const selector = $("<select>");
             for (const name of names) {
                 $("<option>").attr("value", name).text(name).appendTo(selector);

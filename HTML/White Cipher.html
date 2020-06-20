@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
     <title>White Cipher — Keep Talking and Nobody Explodes Module</title>
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -31,7 +30,6 @@
             font-size: 20px;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
@@ -47,7 +45,7 @@
                 <p class="flavour-text">White as the driven snow, this cipher knows no bounds to give defusers a hard time.</p>
                 <p>On the module, you will see 3 screens, a keyboard, 2 arrows, and a submit button that displays the current page you’re on.</p>
                 <p>Pressing the right arrow takes you to the next page. Pressing the left arrow takes you to the previous page. There is a total of 2 pages.</p>
-                <p>On page 1, the top screen shows a 6 letter encrypted word, the middle screen shows an number.</p>
+                <p>On page 1, the top screen shows a 6 letter encrypted word, the middle screen shows a number.</p>
                 <p>On page 2, the top and middle screen shows an 8 letter key.</p>
         <p>Follow the mechanics down below to decrypt your word:</p>
         <h3>Step 1: Base Caesar Cipher</h3>
@@ -65,7 +63,7 @@
         <p style="text-align:center">
            Encrypted word: DSIHDG<br>
            Number: 1104<br>
-           Base: 4 + 19 + 9 + 8 + 4 + 7 = 51 % 8 = 3 + 2 = 5 
+           Base: 4 + 19 + 9 + 8 + 4 + 7 = 51 % 8 = 3 + 2 = 5
         </p>
     </div>
             <div class="page-footer relative-footer">Page 1 of 5</div>
@@ -96,8 +94,8 @@
         </p>
         <h3>Step 2: Grille Transposition</h3>
         <p>For this, you will need the 8 letter keys from the top and middle screen on page 2.</p>
-        <p>Catenate the 2 keys with the top screen going first, then turn it into a 4x4 matrix of letters.</p>
-        <p>Then using the grid below, rotate it 90 degrees clockwise an X number of times, where X is the number of ports.</p>
+        <p>Concatenate the 2 keys with the top screen going first, then turn it into a 4x4 matrix of letters.</p>
+        <p>Then using the grid below, rotate it 90 degrees clockwise X times, where X is the number of ports.</p>
         <table>
         <tbody>
         <tr><th>X</th><th>&nbsp</th><th>&nbsp</th><th>&nbsp</th></tr>
@@ -161,7 +159,7 @@
         <p style="text-align:center">Decrypted Key: PXFCRLAONKSEWDYU</p>
         <h3>Step 3: Sean Cipher</h3>
         <p class="flavour-text">Welcome to Sean Cipher, where the ciphers are made up and the points don’t matter.</p>
-        <p>For this, you’re going to need the encrypted word you got from step 1, and the 16 letter key you got from step 2.</p>        
+        <p>For this, you’re going to need the encrypted word you got from step 1, and the 16 letter key you got from step 2.</p>
         <p>Take the key and remove any duplicate letters from it, removing all 2nd and more occurrences. Next, take the entire alphabet and remove all the letters that are shown in the key.</p>
         <p>If the number of lit indicators is even, put the alphabet at the end of the key.<br>Otherwise, place it in front of the key.</p>
     </div>
