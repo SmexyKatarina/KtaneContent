@@ -4579,9 +4579,20 @@ const parseData = [
 				}
 			},
 			{
+				regex: /Puzzle Code: ([A-Z]{6})/,
+				handler:function(matches,module) {
+					module.groups.add($('<a target="_blank" href="https://remote-math.onpointcoding.net/logs/?q=*/*/*/'+matches[1]+'">Search for server logfile matching puzzle code</a>'))
+				}
+			},
+			{
 				regex: /.+/
 			}
 		]
+	},
+	{
+		displayName: "Repo Selector",
+		moduleID: "qkRepoSelector",
+		loggingTag: "Repo Selector"
 	},
 	{
 		moduleID: "resistors",
@@ -4596,6 +4607,88 @@ const parseData = [
 			{
 				regex: /Already placed/,
 				handler: function() {
+					return true;
+				}
+			},
+			{
+				regex: /.+/
+			}
+		]
+	},
+	{
+		displayName: "RGB Arithmetic",
+		moduleID: "rgbArithmetic",
+		loggingTag: "RGB Arithmetic",
+		matches: [
+			{
+				regex: /The left grid displays:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The left grid displays:", obj: pre(lines) });
+					return true;
+				}
+			},
+			{
+				regex: /The right grid displays:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The right grid displays:", obj: pre(lines) });
+					return true;
+				}
+			},
+			{
+				regex: /The center grid should display:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The center grid should display:", obj: pre(lines) });
+					return true;
+				}
+			},
+			{
+				regex: /The transformed left grid is:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The transformed left grid is:", obj: pre(lines) });
+					return true;
+				}
+			},
+			{
+				regex: /The transformed right grid is:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The transformed right grid is:", obj: pre(lines) });
+					return true;
+				}
+			},
+			{
+				regex: /The submitted grid was:/,
+				handler: function(matches, module) {
+					let lines = readTaggedLine();
+					for (let i = 0; i < 3; i++) {
+						lines += `\n${readTaggedLine()}`;
+					}
+
+					module.push({ label: "The submitted grid was:", obj: pre(lines) });
 					return true;
 				}
 			},

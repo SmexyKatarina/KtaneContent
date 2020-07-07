@@ -10,10 +10,7 @@
   "Published": "2019-08-11",
   "SortKey": "ALPHABITS",
   "SourceUrl": "https://github.com/Procyon-KTaNE/Alpha-Bits",
-  "Souvenir": {
-    "Explanation": "Which letter appeared on the left/right side of Alpha-Bits?",
-    "Status": "Considered"
-  },
+  "Souvenir": { "Status": "Supported" },
   "SteamID": "1832051156",
   "Symbol": "Ab",
   "TutorialVideoUrl": "https://www.youtube.com/watch?v=t4mCOpQXUOM",
